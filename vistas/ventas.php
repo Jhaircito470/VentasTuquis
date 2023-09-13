@@ -335,7 +335,13 @@
                             respuesta['cantidad'] + 'Kg(s)',
                             respuesta['Precio_venta_producto'],
                             respuesta['total'],
-                            
+                            "<center>" +
+                            "<span class='btnIngresarPeso text-success px-1' style='cursor:pointer; data-bs-toggle='tooltip'data bs-place>" +
+                            "<i class='fas fa-pencil-alt fs-5'></i>" +
+                            "</span>" +
+                            "<span class='btnAumentarStock text-success px-1' style='cursor:pointer;'>" +
+                            "<i class='fas fa-plus-circle fs-5'></i>" +
+                             "</span>" +
                         ])
                     }
                 }

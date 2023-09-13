@@ -282,10 +282,10 @@
               $("#iptCodigoVenta").autocomplete({
                 source: items,
                 select: function(event, ui){
-                  CargarProducto(ui.item.value);
-
-                  //$("#iptCodigoVenta").val("");
-                  //$("#iptCodigoVenta").focus("");
+                  // CargarProducto(ui.item.value);
+                    console.log("🚀 ~ file: ventas.php ~ line 286 ~ $ ~ ui.item.value",ui.item.value)
+                  // $("#iptCodigoVenta").val("");
+                  // $("#iptCodigoVenta").focus("");
 
                 return false;
 

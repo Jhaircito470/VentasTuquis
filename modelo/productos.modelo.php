@@ -217,6 +217,12 @@ class ProductosModelo {
         }
 
     }
+    static public function mdlListarNombreProductos(){
+
+        $stmt = Conexion::conectar()->prepare("SELECT Concat(codigo_producto, ' - ' ,c.nombre_categoria, ' - ',descripcion_producto, ' -S./ ',p.precio_venta_producto) as descripcion_producto FROM productos p inner join categorias c on p.id_categoria_producto = c.id_categoria");
+        $stmt ->execute();
+        return $stmt->fetchAll();
+    }
 
     /* ======================================== */
     /* PETICION DELETE PARA ELIMINAR DATOS */

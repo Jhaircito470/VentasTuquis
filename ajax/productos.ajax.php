@@ -64,6 +64,10 @@ class ajaxProductos{
     
         echo json_encode($respuesta);
     }
+    public function ajaxListarNombreProductos(){
+        $NombreProductos = ProductosControlador::ctrListarNombreProductos();
+        echo json_encode($NombreProductos);
+    }
 
     /* public function ajaxEliminarProducto(){
 
@@ -125,6 +129,10 @@ if(isset($_POST['accion']) && $_POST['accion'] == 1){ // parametro para listar p
 
     $actualizarProducto -> ajaxActualizarProducto($data);
 
+}else if(isset($_POST['accion']) && $_POST['accion'] == 6){
+
+        $nombreProducto = new AjaxProductos();
+        $nombreProducto -> ajaxListarNombreProductos();
 
 }else if(isset($_FILES)){
     $archivo_productos = new ajaxProductos();

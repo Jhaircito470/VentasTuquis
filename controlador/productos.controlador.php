@@ -48,5 +48,9 @@ class ProductosControlador{
         
         return $respuesta;
     }*/
+    static public function ctrListarNombreProductos(){
+        $producto = ProductosModelo::mdlListarNombreProductos();
+        return $producto;
+    }
 
 }

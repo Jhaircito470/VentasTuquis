@@ -272,8 +272,8 @@
         method: "POST",
         data: {
           'accion': 6
-        }.
-        dataType: 'json',
+        },
+        dataType:'json',
           success: function(respuesta){
 
             for (let i =0; i <respuesta.length; i++) {

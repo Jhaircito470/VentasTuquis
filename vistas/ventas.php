@@ -312,7 +312,35 @@
 
 
         $.ajax({
-            url
+            url: "ajax/productos.ajax.php",
+            method: "POST",
+            data: {
+                'accion': 7, //Buscar producto por su codigo de barras
+                'codigo_producto': codigo_producto
+            },
+            dataType: 'json',
+            success: function(respuesta){
+                /************************************************/
+                // Si la respuesta es verdadera, trae algun dato
+                /***********************************************/
+                if (respuesta){
+                    var TotalVenta = 0.00;
+                    if(respuesta['aplica_peso'] ==1){
+                        table.row.add([
+                            itemProducto,
+                            respuesta['codigo_producto'],
+                            respuesta['id_categoria'],
+                            respuesta['nombre_categoria'],
+                            respuesta['descripcion_producto'],
+                            respuesta['cantidad'] + 'Kg(s)',
+                            respuesta['Precio_venta_producto'],
+                            respuesta['total'],
+                            
+                        ])
+                    }
+                }
+
+            }
 
         });
 

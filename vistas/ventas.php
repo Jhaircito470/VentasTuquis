@@ -281,8 +281,8 @@
               $("#iptCodigoVenta").autocomplete({
                 source: items,
                 select: function(event, ui){
-                    console.log("🚀 ~ file: ventas.php ~ line 286 ~ $ ~ ui.item.value",ui.item.value)
-                    CargarProducto(ui.item.value);
+                    //console.log("🚀 ~ file: ventas.php ~ line 284 ~ $ ~ ui.item.value",ui.item.value)
+                    CargarProductos(ui.item.value);
                     
                   // $("#iptCodigoVenta").val("");
                   // $("#iptCodigoVenta").focus("");
@@ -294,8 +294,28 @@
 
         }
 
-      })
+      });
 
     })
+    /************************************************/
+      // FUNCION PARA CARGAR PRODUCTOS EN EL DATATABLE
+      /***********************************************/
+    function CargarProductos(producto=""){
+
+        if(producto !=""){
+            var codigo_producto = producto;
+            
+        }else{
+            var codigo_producto = $("#iptCodigoVenta").val();
+        }
+        console.log("🚀 ~ file: ventas.php ~ line 311 ~ CargarProductos ~ codigo_producto",codigo_producto)
+
+
+        $.ajax({
+            url
+
+        });
+
+    }
 
     </script>

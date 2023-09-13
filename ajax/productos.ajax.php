@@ -75,7 +75,7 @@ class ajaxProductos{
         echo json_encode($respuesta);
 
          }
-    */
+    //*/
 
 }
 

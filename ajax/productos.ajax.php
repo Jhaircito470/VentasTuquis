@@ -65,7 +65,7 @@ class ajaxProductos{
         echo json_encode($respuesta);
     }
 
-    public function ajaxEliminarProducto(){
+    /* public function ajaxEliminarProducto(){
 
         $table = "productos";
         $id = $_POST["codigo_producto"];
@@ -74,7 +74,8 @@ class ajaxProductos{
 
         echo json_encode($respuesta);
 
-    }
+         }
+    */
 
 }
 

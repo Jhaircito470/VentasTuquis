@@ -176,7 +176,7 @@ class ProductosModelo {
             }
 
         }
-        catch (Excepction $e){
+        catch (Exception $e){
 
             $resultado = 'Excepcion capturada: '. $e->getMessage(). "\n";
         }

@@ -221,11 +221,11 @@
     </div>
     <!-- /.content -->
 
-    <script>
+<script>
     
     var table;
     var items =[]; // se usa para el input de autocompletar
-    
+    var itemProducto = 1;
 
     $(document).ready(function(){
       /************************************************/

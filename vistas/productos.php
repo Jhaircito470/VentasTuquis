@@ -564,7 +564,7 @@ $(document).ready(function(){
         calcularUtilidad();
     });
 
-    /*======================================================================*/
+    /*=====================================================================*/
     // EVENTO PARA CALCULAR LA UTILIDAD AL CAMBIAR EL CONTENIDO (PERDER FOCUS)
     /*======================================================================*/
     $("#iptPrecioCompraReg, #iptPrecioVentaReg").change(function() {

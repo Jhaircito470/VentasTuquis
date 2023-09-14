@@ -342,7 +342,7 @@
                             "<i class='fas fa-cart-plus fs-5'></i>" +
                             "</span>" +
                             "<span class='btnEliminarproducto text-success px-1' style='cursor:pointer; data-bs-toggle='tooltip' data-bs-placement='top' title='Aumentar Stock'>" +
-                            "<i class='fas fa-cart-plus fs-5'></i>" +
+                            "<i class='fas fa-cart-arrow-down fs-5'></i>" +
                             "</span>" +
                             "</center>",
                             respuesta['aplica_peso']
@@ -364,18 +364,19 @@
                             "<i class='fas fa-cart-plus fs-5'></i>" +
                             "</span>" +
                             "<span class='btnDisminuirCantidad text-success px-1' style='cursor:pointer; data-bs-toggle='tooltip' data-bs-placement='top' title='Aumentar Stock'>" +
-                            "<i class='fas fa-cart-plus fs-5'></i>" +
+                            "<i class='fas fa-cart-arrow-down fs-5'></i>" +
                             "</span>" +
                             "<span class='btnEliminarproducto text-success px-1' style='cursor:pointer; data-bs-toggle='tooltip' data-bs-placement='top' title='Aumentar Stock'>" +
-                            "<i class='fas fa-cart-plus fs-5'></i>" +
+                            "<i class='fas fa-trash fs-5'></i>" +
                             "</span>" +
                             "</center>",
                             respuesta['aplica_peso']
                         ]).draw();
                         itemProducto = itemProducto + 1;
                     } 
+                    // recalcular total venta
                     table.rows().eq(0).each(function(index){
-                        var row = data.row(index);
+                        var row = table.row(index);
 
                         var data = row.data();
                         TotalVenta = parseFloat(TotalVenta) + parseFloat(data[7].replace("S./",""));
@@ -383,6 +384,7 @@
                     });
                     $("#totalVenta").html("");
                     $("#totalVenta").html(TotalVenta.toFixed(2));
+                    
                     $("iptCodigoVenta").val("");
 
                     var igv = parseFloat(TotalVenta) * 0.18;

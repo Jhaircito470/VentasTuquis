@@ -400,7 +400,7 @@
                 }else{
                     Toasf.fire({
                         icon: 'error',
-                        title: 'El producto no existe o no tiene stock'
+                        title: 'El producto no existe o No tiene stock'
                     });
                     $("#iptCodigoVenta").val("");
                     $('#iptCodigoVenta').focus();

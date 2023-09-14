@@ -230,11 +230,13 @@ class ProductosModelo {
                                                         c.nombre_categoria,
                                                         descripcion_producto,
                                                         '1' as cantidad,
-                                                         CONCAT('S./ ', CONVERT(ROUND(precio_venta_producto,2),CHAR)) as precio_venta_producto,
-                                                         CONCAT('S./ ', CONVERT(ROUND(1*precio_venta_producto,2),CHAR)) as total,
+                                                        CONCAT('S./ ', CONVERT(ROUND(precio_venta_producto,2),CHAR)) as precio_venta_producto,
+                                                        CONCAT('S./ ', CONVERT(ROUND(1*precio_venta_producto,2),CHAR)) as total,
                                                          '' as acciones,
                                                          c.aplica_peso
-                                                         from productos p inner join categorias c on p.id_categoria_producto = c.id_categoria where codigo_producto = :codigoProducto and p.stock_producto > 0");
+                                                    FROM productos p inner join categorias c on p.id_categoria_producto = c.id_categoria 
+                                                    where codigo_producto = :codigoProducto 
+                                                    and p.stock_producto > 0");
         $stmt -> bindParam(":codigoProducto",$codigoProducto,PDO::PARAM_INT);
         $stmt -> execute();
         return $stmt->fetch(PDO::FETCH_OBJ);
